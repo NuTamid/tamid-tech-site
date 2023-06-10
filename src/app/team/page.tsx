@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar"
 
-const AboutPage = () => {
+const TeamPage = () => {
   return (
     <>
-      <h1>Welcome to the About page</h1>
+      <h1>Welcome to the Team page</h1>
       <Navbar />
     </>
   )
 }
 
-export default AboutPage
+export default TeamPage
