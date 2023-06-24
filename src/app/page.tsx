@@ -1,9 +1,14 @@
+import Image from "next/image"
 
 
 const HomePage = () => {
   return (
     <main>
-      <h1>Welcome to the Home page!</h1>
+      <div className="bg-black">
+        <h3 className="text-white">The next era of tech @ TAMID Northeastern</h3>
+        <h1 className="text-white">TAMID Tech</h1>
+        <div className="text-white">Image placeholder!</div>
+      </div>
     </main>
   )
 }
