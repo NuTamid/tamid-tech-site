@@ -1,0 +1,53 @@
+.buttonArrow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttonArrow .arrowIcon {
+  overflow: visible;
+  margin-left: 3px;
+  width: 8px;
+}
+
+.buttonArrow .arrowHead {
+  transform: translateX(0);
+  transition: transform 100ms ease-in-out;
+}
+
+.buttonArrow .arrowBody {
+  opacity: 0;
+  transform: scaleX(1);
+  transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
+}
+
+.buttonArrow:hover {
+  color: #00B3FF;
+  transition-duration: 0.2s;
+}
+
+.buttonArrow:hover .arrowHead {
+  transform: translateX(3px);
+}
+
+.buttonArrow:hover .arrowBody {
+  opacity: 1;
+  transform: scaleX(2);
+}
+
+.linkUnderline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.linkUnderlineBlack {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#00B3FF, #00B3FF);
+}
+
+.linkUnderline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
