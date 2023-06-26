@@ -5,7 +5,7 @@ import "@/styles/Navbar.css"
 const Navbar = () => {
   return (
     <>
-      <div className="mx-auto py-4 px-48 bg-black">
+      <div className="mx-auto bg-black py-4 px-8 lg:px-48">
         <div className="flex items-center justify-between">
           <Link href="/">
             <Image
@@ -15,25 +15,25 @@ const Navbar = () => {
               height={46}
             />
           </Link>
-          <ul className="flex gap-10 text-white text-sm font-medium">
+          <ul className="hidden lg:flex gap-10 text-white text-sm font-medium">
             <li>
               <Link href="/about" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>About Us</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">About Us</span>
               </Link>
             </li>
             <li>
               <Link href="/projects" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>Projects</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">Projects</span>
               </Link>
             </li>
             <li>
               <Link href="/why-us" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>Why Us?</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">Why Us?</span>
               </Link>
             </li>
             <li>
               <Link href="/team" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>Our Team</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">Our Team</span>
               </Link>
             </li>
   
