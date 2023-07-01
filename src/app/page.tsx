@@ -1,9 +1,12 @@
+import Image from "next/image"
 
 
 const HomePage = () => {
   return (
     <main>
-      <h1>Welcome to the Home page!</h1>
+      <div className="">
+        
+      </div>
     </main>
   )
 }
