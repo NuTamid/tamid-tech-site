@@ -1,11 +1,20 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import "@/styles/Navbar.css"
+import { useState } from "react";
 
 const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <div className="mx-auto py-4 px-48 bg-black">
+      <div className="mx-auto bg-black py-4 px-8 lg:px-48">
         <div className="flex items-center justify-between">
           <Link href="/">
             <Image
@@ -15,25 +24,91 @@ const Navbar = () => {
               height={46}
             />
           </Link>
-          <ul className="flex gap-10 text-white text-sm font-medium">
+
+          {/* Mobile view */}
+          <div className="relative lg:hidden">
+            <div className="flex items-center">
+              <button
+                className="text-gray-200 focus:outline-none"
+                onClick={toggleMenu}
+              >
+                <svg
+                  className="h-8 w-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d={isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {isOpen && (
+              <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg">
+                <Link
+                  href="/about"
+                  onClick={toggleMenu}
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/projects"
+                  onClick={toggleMenu}
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/why-us"
+                  onClick={toggleMenu}
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  Why Us?
+                </Link>
+                <Link
+                  href="/team"
+                  onClick={toggleMenu}
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  Our Team
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={toggleMenu}
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                >
+                  Contact
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Desktop view */}
+          <ul className="hidden lg:flex gap-10 text-white text-sm font-medium">
             <li>
               <Link href="/about" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>About Us</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">About Us</span>
               </Link>
             </li>
             <li>
               <Link href="/projects" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>Projects</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">Projects</span>
               </Link>
             </li>
             <li>
               <Link href="/why-us" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>Why Us?</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">Why Us?</span>
               </Link>
             </li>
             <li>
               <Link href="/team" className="hover:text-[#00B3FF] duration-[0.2s]">
-                <span className={`link linkUnderline linkUnderlineBlack py-2`}>Our Team</span>
+                <span className="link linkUnderline linkUnderlineBlack py-2">Our Team</span>
               </Link>
             </li>
   
@@ -42,10 +117,10 @@ const Navbar = () => {
                 Contact
                 <svg viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg" className={`arrowIcon`}>
                   <g className={`arrowHead`}>
-                    <path d="M1 1C4.5 4 5 4.38484 5 4.5C5 4.61516 4.5 5 1 8" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M1 1C4.5 4 5 4.38484 5 4.5C5 4.61516 4.5 5 1 8" stroke="currentColor" strokeWidth="1.5" />
                   </g>
                   <g className={`arrowBody`}>
-                    <path d="M3.5 4.5H0" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M3.5 4.5H0" stroke="currentColor" strokeWidth="1.5" />
                   </g>
                 </svg>
               </Link>
