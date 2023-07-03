@@ -7,7 +7,7 @@ const gradientColors = colors.join(',');
 
 const style = {
   backgroundImage: `linear-gradient(to right, ${gradientColors})`,
-  backgroundSize: '115% auto',
+  backgroundSize: '117% auto',
   backgroundClip: 'text',
   WebkitBackgroundClip: 'text',
   color: 'transparent',
@@ -16,10 +16,11 @@ const style = {
 const HomePage = () => {
   return (
     <main>
-      <div className="animate-slide-up relative z-20 mt-[220px] pl-6 text-white text-center font-semibold text-3xl pb-4">The next era of tech <span className="font-semibold align-top	text-2xl">@</span> TAMID Northeastern</div>
-      <div className="flex justify-center pb-16">
-        <div className="z-0 absolute w-[405px] h-[294px] bg-orange-400 rounded-full blur-[200px]" />
-        <h1 className="animate-slide-up z-10 text-center pr-5 text-[14vw] lg:text-[10.5vw] font-bold leading-none tracking-tight" style={style}>TAMID Tech</h1>
+
+      <div className="animate-slide-up relative z-20 mt-24 lg:mt-56 lg:pl-6 text-white text-center font-semibold sm:text-xl md:text-2xl lg:text-3xl pb-2 lg:pb-3">The next era of tech <span className="font-semibold align-top lg:text-2xl">@</span> TAMID Northeastern</div>
+      <div className="flex justify-center pb-7 lg:pb-16">
+        <div className="z-0 absolute w-[200px] h-[87px] lg:w-[405px] lg:h-[294px] bg-orange-400 rounded-full blur-[75px] lg:blur-[200px]" />
+        <h1 className="animate-slide-up z-10 text-center lg:pr-5 text-[14vw] lg:text-[10.5vw] font-bold leading-none tracking-tight" style={style}>TAMID Tech</h1>
       </div>
       <Image
         src="/heroimage.svg"
