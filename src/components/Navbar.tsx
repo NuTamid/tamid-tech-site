@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <div className="relative z-50 mx-auto bg-black py-4 px-8 lg:px-48">
         <div className="flex items-center justify-between">
-          <Link href="/" onClick={toggleMenu}>
+          <Link href="/" onClick={() => setIsOpen(false)}>
             <Image
               src="/navlogo.svg"
               alt="TAMID logo"
