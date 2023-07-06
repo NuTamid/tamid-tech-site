@@ -10,6 +10,6 @@
 }
   
 .animate-slide-up {
-  animation: slide-up 1.5s ease-in-out forwards;
+  animation: slide-up 2s ease-in-out forwards;
   animation-delay: calc(var(--delay, 0) * 0.1s);
 }
