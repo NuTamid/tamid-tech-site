@@ -2,21 +2,46 @@
 import Link from "next/link"
 import Image from "next/image"
 import "@/styles/Navbar.css"
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node) && 
+        menuButtonRef.current && !menuButtonRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
     <>
       <div className="relative z-50 mx-auto bg-black py-4 px-8 lg:px-48">
         <div className="flex items-center justify-between">
-          <Link href="/" onClick={() => setIsOpen(false)}>
+          <Link href="/" onClick={closeMenu}>
             <Image
               src="/navlogo.svg"
               alt="TAMID logo"
@@ -29,6 +54,7 @@ const Navbar = () => {
           <div className="relative lg:hidden">
             <div className="flex items-center">
               <button
+                ref={menuButtonRef}
                 className="text-gray-200 focus:outline-none"
                 onClick={toggleMenu}
               >
@@ -49,38 +75,38 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-              <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg">
+              <div ref={menuRef} className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-lg">
                 <Link
                   href="/about"
-                  onClick={toggleMenu}
+                  onClick={closeMenu}
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   About Us
                 </Link>
                 <Link
                   href="/projects"
-                  onClick={toggleMenu}
+                  onClick={closeMenu}
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   Projects
                 </Link>
                 <Link
                   href="/why-us"
-                  onClick={toggleMenu}
+                  onClick={closeMenu}
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   Why Us?
                 </Link>
                 <Link
                   href="/team"
-                  onClick={toggleMenu}
+                  onClick={closeMenu}
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   Our Team
                 </Link>
                 <Link
                   href="/contact"
-                  onClick={toggleMenu}
+                  onClick={closeMenu}
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   Contact
