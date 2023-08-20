@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image"
-import "@/styles/Navbar.css"
+import "@/styles/Animations.css"
 import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
