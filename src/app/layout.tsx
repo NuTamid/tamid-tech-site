@@ -23,7 +23,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black`}>
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        <div className="absolute top-auto w-full">
+          <Footer />
+        </div>
       </body>
     </html>
   )
