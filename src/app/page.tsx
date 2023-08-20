@@ -142,7 +142,7 @@ const HomePage = () => {
             <div className="flex justify-center md:justify-normal">
               <div className="md:pl-1 text-[#ADBCC2] w-[85%] md:w-full flex flex-col gap-4 leading-[1.7]">
                 <p>
-                  We're a group of students, engineers, and designers operating at the intersection of business and technology.
+                  We&apos;re a group of students, engineers, and designers operating at the intersection of business and technology.
                 </p>
                 <p>
                   As part of the&nbsp;
