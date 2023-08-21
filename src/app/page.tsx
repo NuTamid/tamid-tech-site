@@ -135,7 +135,7 @@ const HomePage = () => {
                 svg-animation
               </object>
             )}
-            <Image src={"/tamidoutline.svg"} alt="tamid" height={350} width={350} fetchPriority="high" />
+            <Image src={"/tamidoutline.svg"} alt="tamid" height={350} width={350} priority={true} />
           </div>
           <div className="z-50 md:ml-24 md:w-[70%]">
             <h2 className="hidden md:flex text-white text-5xl font-semibold mb-10">Who are we?</h2>
