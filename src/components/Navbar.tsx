@@ -83,13 +83,13 @@ const Navbar = () => {
                 >
                   About Us
                 </Link>
-                <Link
+                {/* <Link
                   href="/projects"
                   onClick={closeMenu}
                   className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
                 >
                   Projects
-                </Link>
+                </Link> */}
                 <Link
                   href="/why-us"
                   onClick={closeMenu}
@@ -122,11 +122,11 @@ const Navbar = () => {
                 <span className="link linkUnderline linkUnderlineBlack py-2">About Us</span>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/projects" className="hover:text-[#00B3FF] duration-[0.2s]">
                 <span className="link linkUnderline linkUnderlineBlack py-2">Projects</span>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/why-us" className="hover:text-[#00B3FF] duration-[0.2s]">
                 <span className="link linkUnderline linkUnderlineBlack py-2">Why Us?</span>
