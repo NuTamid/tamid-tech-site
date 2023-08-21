@@ -61,7 +61,7 @@ const InfiniteSlider = () => {
           <div className="z-50 absolute inset-0 bg-gradient-to-r from-transparent from-80% via-[#000000dd] via-95% to-black"></div>
           <div className="z-50 absolute inset-0 bg-gradient-to-l from-transparent from-80% via-[#000000dd] via-95% to-black"></div>
         </div>
-        
+
         <div className="infinite-scroll flex items-center justify-around absolute gap-8 left-0">
           {testimonials.map((t, i) => {
             return (
@@ -73,7 +73,7 @@ const InfiniteSlider = () => {
           })}
           {testimonials.map((t, i) => {
             return (
-              <div key={i}  className="flex flex-col justify-center items-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-16 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
+              <div key={i} className="flex flex-col justify-center items-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-16 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
                 <p className="text-[#ADBCC2] font-light text-lg pb-4 text-center leading-snug">{t.quote}</p>
                 <p className="font-thin text-sm text-[#ADBCC2]">{t.name}</p>
               </div>
@@ -114,7 +114,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Who are we? */} 
+      {/* Who are we? */}
       <div className="relative -z-50">
         <div className="absolute overflow-hidden h-[1000px] w-full">
           {/* Mobile bg gradients */}
@@ -128,14 +128,14 @@ const HomePage = () => {
       </div>
       <div className="z-20 lg:px-48">
         <div className="flex justify-center flex-col md:flex-row w-full mt-72 md:mt-56 mb-24 md:mb-52">
-          {/* <Image src={"/tamidoutline.svg"} alt="tamid" height={300} width={300} /> */}
           <h2 className="md:hidden text-center text-white text-5xl font-semibold mb-20">Who are we?</h2>
           <div ref={ref} className="flex justify-center w-full md:w-[350px] h-[270px] md:h-fit relative mb-20 md:mb-0">
             {inView && (
-              <object className="flex w-3/4 md:w-full" type="image/svg+xml" data="/tamidoutlineanimated.svg">
+              <object className="flex w-3/4 md:w-full absolute" type="image/svg+xml" data="/tamidoutlineanimated.svg">
                 svg-animation
               </object>
             )}
+            <Image src={"/tamidoutline.svg"} alt="tamid" height={350} width={350} fetchPriority="high" />
           </div>
           <div className="z-50 md:ml-24 md:w-[70%]">
             <h2 className="hidden md:flex text-white text-5xl font-semibold mb-10">Who are we?</h2>
