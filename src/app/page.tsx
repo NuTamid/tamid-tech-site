@@ -131,7 +131,7 @@ const HomePage = () => {
           <h2 className="md:hidden text-center text-white text-5xl font-semibold mb-20">Who are we?</h2>
           <div ref={ref} className="flex justify-center w-full md:w-[350px] h-[270px] md:h-fit relative mb-20 md:mb-0">
             {inView && (
-              <object className="flex w-3/4 md:w-full absolute" type="image/svg+xml" data="/tamidoutlineanimated.svg">
+              <object className="flex w-[293px]  md:w-full absolute" type="image/svg+xml" data="/tamidoutlineanimated.svg">
                 svg-animation
               </object>
             )}
