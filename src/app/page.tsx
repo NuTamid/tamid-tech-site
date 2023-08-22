@@ -29,28 +29,34 @@ const InfiniteSlider = () => {
 
   const testimonials = [
     {
-      quote: "Sample quote by student, TAMID Member or a past client. The TC Team at TAMID Northeastern have been absolutely incredible!!",
-      name: "Firstname Lastname (Company)"
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      name: "Dalia Katan",
+      title: "CEO and Founder of Presently"
     },
     {
-      quote: "Sample quote by student, TAMID Member or a past client. The TC Team at TAMID Northeastern have been absolutely incredible!!",
-      name: "Firstname Lastname (Company)"
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      name: "Dalia Katan",
+      title: "CEO and Founder of Presently"
     },
     {
-      quote: "Sample quote by student, TAMID Member or a past client. The TC Team at TAMID Northeastern have been absolutely incredible!!",
-      name: "Firstname Lastname (Company)"
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      name: "Dalia Katan",
+      title: "CEO and Founder of Presently"
     },
     {
-      quote: "Sample quote by student, TAMID Member or a past client. The TC Team at TAMID Northeastern have been absolutely incredible!!",
-      name: "Firstname Lastname (Company)"
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      name: "Dalia Katan",
+      title: "CEO and Founder of Presently"
     },
     {
-      quote: "Sample quote by student, TAMID Member or a past client. The TC Team at TAMID Northeastern have been absolutely incredible!!",
-      name: "Firstname Lastname (Company)"
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      name: "Dalia Katan",
+      title: "CEO and Founder of Presently"
     },
     {
-      quote: "Sample quote by student, TAMID Member or a past client. The TC Team at TAMID Northeastern have been absolutely incredible!!",
-      name: "Firstname Lastname (Company)"
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      name: "Dalia Katan",
+      title: "CEO and Founder of Presently"
     },
   ]
 
@@ -65,17 +71,19 @@ const InfiniteSlider = () => {
         <div className="infinite-scroll flex items-center justify-around absolute gap-8 left-0">
           {testimonials.map((t, i) => {
             return (
-              <div key={i} className="flex flex-col justify-center items-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-16 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
-                <p className="text-[#ADBCC2] font-light pb-4 text-center leading-snug">{t.quote}</p>
-                <p className="font-thin text-sm text-[#ADBCC2]">{t.name}</p>
+              <div key={i} className="flex flex-col justify-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
+                <p className="text-[#ADBCC2] mb-6 font-semibold leading-snug">{t.quote}</p>
+                <p className="font-light text-sm text-[#ADBCC2]">{t.name}</p>
+                <p className="font-light text-xs text-[#ADBCC2]">{t.title}</p>
               </div>
             );
           })}
           {testimonials.map((t, i) => {
             return (
-              <div key={i} className="flex flex-col justify-center items-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-16 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
-                <p className="text-[#ADBCC2] font-light text-lg pb-4 text-center leading-snug">{t.quote}</p>
-                <p className="font-thin text-sm text-[#ADBCC2]">{t.name}</p>
+              <div key={i} className="flex flex-col justify-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
+                <p className="text-[#ADBCC2] mb-6 font-semibold leading-snug">{t.quote}</p>
+                <p className="font-light text-sm text-[#ADBCC2]">{t.name}</p>
+                <p className="font-light text-xs text-[#ADBCC2]">{t.title}</p>
               </div>
             );
           })}
