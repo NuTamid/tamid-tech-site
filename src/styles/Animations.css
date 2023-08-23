@@ -57,11 +57,28 @@
     left: 0;
   }
   100% {
-    left: -100%;
+    left: -156rem;
   }
 }
 
-.infinite-scroll {
-  animation: scroll 50s linear infinite;
-  will-change: transform;
+/* Desktop styles */
+@media (min-width: 768px) {
+  .infinite-scroll {
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+  }
+  .infinite-scroll:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .infinite-scroll {
+    animation: scroll 5s linear infinite; /* Adjust the duration as needed */
+    will-change: transform;
+  }
+  .infinite-scroll:hover {
+    animation-play-state: paused;
+  }
 }
