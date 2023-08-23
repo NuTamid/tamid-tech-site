@@ -29,32 +29,32 @@ const InfiniteSlider = () => {
 
   const testimonials = [
     {
-      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "1 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
     {
-      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "2 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
     {
-      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "3 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
     {
-      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "4 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
     {
-      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "5 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
     {
-      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "6 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
@@ -68,11 +68,11 @@ const InfiniteSlider = () => {
           <div className="z-50 w-1/12 absolute inset-0 bg-gradient-to-l from-transparent via-[#000000b0] via-40% to-black"></div>
         </div>
 
-        <div className="infinite-scroll flex items-center justify-around absolute gap-8">
+        <div className="infinite-scroll flex items-center justify-around absolute gap-[2rem]">
           {testimonials.map((t, i) => {
             return (
-              <div key={i} className="flex flex-col justify-center h-[10rem] w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white hover:bg-opacity-20 hover:scale-[110%] duration-300">
-                <p className="text-[#ADBCC2] mb-6 font-semibold leading-snug">{t.quote}</p>
+              <div key={i} className="flex flex-col justify-center h-[10.5rem] w-[21rem] md:w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white hover:bg-opacity-20 hover:scale-[110%] duration-300">
+                <p className="text-[#ADBCC2] mb-4 md:mb-6 font-semibold leading-snug">{t.quote}</p>
                 <p className="font-light text-sm text-[#ADBCC2]">{t.name}</p>
                 <p className="font-light text-xs text-[#ADBCC2]">{t.title}</p>
               </div>
@@ -80,8 +80,8 @@ const InfiniteSlider = () => {
           })}
           {testimonials.map((t, i) => {
             return (
-              <div key={i} className="flex flex-col justify-center h-[10rem] w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white hover:bg-opacity-20 hover:scale-[110%] duration-300">
-                <p className="text-[#ADBCC2] mb-6 font-semibold leading-snug">{t.quote}</p>
+              <div key={i} className="flex flex-col justify-center h-[10.5rem] w-[21rem] md:w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white hover:bg-opacity-20 hover:scale-[110%] duration-300">
+                <p className="text-[#ADBCC2] mb-4 md:mb-6 font-semibold leading-snug">{t.quote}</p>
                 <p className="font-light text-sm text-[#ADBCC2]">{t.name}</p>
                 <p className="font-light text-xs text-[#ADBCC2]">{t.title}</p>
               </div>
