@@ -86,7 +86,4 @@
     animation: scroll-mobile 35s linear infinite; /* Adjust the duration as needed */
     will-change: transform;
   }
-  .infinite-scroll:hover {
-    animation-play-state: paused;
-  }
 }
