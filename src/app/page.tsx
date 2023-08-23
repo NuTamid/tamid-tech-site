@@ -61,17 +61,17 @@ const InfiniteSlider = () => {
   ]
 
   return (
-    <div className="flex items-center justify-center h-[12rem]">
-      <div className="flex w-[200%] items-center h-full overflow-hidden relative">
+    <div className="flex items-center justify-center h-[14rem]">
+      <div className="flex w-[200%] overflow-hidden items-center h-full relative">
         <div className="w-full h-full relative">
-          <div className="z-50 absolute inset-0 bg-gradient-to-r from-transparent from-80% via-[#000000dd] via-95% to-black"></div>
-          <div className="z-50 absolute inset-0 bg-gradient-to-l from-transparent from-80% via-[#000000dd] via-95% to-black"></div>
+          <div className="z-50 w-1/12 left-auto absolute inset-0 bg-gradient-to-r from-transparent via-[#000000b0] via-40% to-black"></div>
+          <div className="z-50 w-1/12 absolute inset-0 bg-gradient-to-l from-transparent via-[#000000b0] via-40% to-black"></div>
         </div>
 
-        <div className="infinite-scroll flex items-center justify-around absolute gap-8 left-0">
+        <div className="infinite-scroll flex items-center justify-around absolute gap-8">
           {testimonials.map((t, i) => {
             return (
-              <div key={i} className="flex flex-col justify-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
+              <div key={i} className="flex flex-col justify-center h-[10rem] w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white hover:bg-opacity-20 hover:scale-[110%] duration-300">
                 <p className="text-[#ADBCC2] mb-6 font-semibold leading-snug">{t.quote}</p>
                 <p className="font-light text-sm text-[#ADBCC2]">{t.name}</p>
                 <p className="font-light text-xs text-[#ADBCC2]">{t.title}</p>
@@ -80,7 +80,7 @@ const InfiniteSlider = () => {
           })}
           {testimonials.map((t, i) => {
             return (
-              <div key={i} className="flex flex-col justify-center w-[24rem] h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white">
+              <div key={i} className="flex flex-col justify-center h-[10rem] w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white hover:bg-opacity-20 hover:scale-[110%] duration-300">
                 <p className="text-[#ADBCC2] mb-6 font-semibold leading-snug">{t.quote}</p>
                 <p className="font-light text-sm text-[#ADBCC2]">{t.name}</p>
                 <p className="font-light text-xs text-[#ADBCC2]">{t.title}</p>
@@ -124,7 +124,7 @@ const HomePage = () => {
 
       {/* Who are we? */}
       <div className="relative -z-50">
-        <div className="absolute overflow-hidden h-[1000px] w-full">
+        <div className="absolute overflow-hidden h-[1100px] w-full">
           {/* Mobile bg gradients */}
           <div className="md:hidden z-0 absolute -left-[8rem] -top-[2rem] w-[600px] h-[800px] bg-gradient-radial from-[#8201e5] via-transparent via-70% opacity-[0.25]" />
           <div className="md:hidden z-0 overflow-auto absolute left-[5rem] top-[20rem] w-[800px] h-[700px] bg-gradient-radial from-[#00aaf3] via-[#0071f366] via-50% to-75% opacity-[0.22]" />
@@ -135,7 +135,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="z-20 lg:px-48">
-        <div className="flex justify-center flex-col md:flex-row w-full mt-72 md:mt-56 mb-24 md:mb-52">
+        <div className="flex justify-center flex-col md:flex-row w-full mt-72 md:mt-56 mb-24 md:mb-[12rem]">
           <h2 className="md:hidden text-center text-white text-5xl font-semibold mb-20">Who are we?</h2>
           <div ref={ref} className="flex justify-center w-full md:w-[350px] h-[270px] md:h-fit relative mb-20 md:mb-0">
             {inView && (
@@ -169,7 +169,7 @@ const HomePage = () => {
 
         {/* <h2 className="text-white text-5xl font-semibold mb-8">Client & Student Testimonials</h2> */}
       </div>
-      <div className="mb-24">
+      <div className="mb-28">
         <InfiniteSlider />
       </div>
     </main>
