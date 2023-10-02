@@ -1,9 +1,10 @@
+import UnderConstruction from "@/components/UnderConstruction"
 
 
 const WhyUsPage = () => {
   return (
     <>
-      <h1>Welcome to the Why Us page</h1>
+      <UnderConstruction />
     </>
   )
 }
