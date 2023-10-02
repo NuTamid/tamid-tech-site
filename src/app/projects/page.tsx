@@ -1,9 +1,10 @@
+import UnderConstruction from "@/components/UnderConstruction"
 
 
 const ProjectsPage = () => {
   return (
     <>
-      <h1>Welcome to the Projects page</h1>
+      <UnderConstruction />
     </>
   )
 }

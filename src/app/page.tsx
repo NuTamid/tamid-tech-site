@@ -29,7 +29,7 @@ const InfiniteSlider = () => {
 
   const testimonials = [
     {
-      quote: "1 -- I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
+      quote: "I choose to come back to TAMID every year because the caliber of talent is just phenomenal.",
       name: "Dalia Katan",
       title: "CEO and Founder of Presently"
     },
