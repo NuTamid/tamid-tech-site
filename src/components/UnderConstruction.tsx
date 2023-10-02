@@ -16,7 +16,7 @@ const UnderConstruction = () => {
                   <div className="hidden md:flex overflow-auto absolute left-1/2 transform -translate-x-1/2 w-full h-[1500px] bg-gradient-radial from-[#00aaf3] from-8% via-[#0071f366] via-50% to-75% opacity-[0.34]" />
             </div>
         </div>
-        <div className="text-white font-bold text-center mt-24 mb-16 text-3xl">PAGE UNDER CONSTRUCTION</div>
+        <div className="text-white font-bold text-center mt-24 mb-16 text-3xl">Under Construction!</div>
         <div className="text-white font-bold text-center text-9xl">🏗️</div>
         <div className="font-mono text-white font-medium text-center mt-16 text-lg">Changes are coming very soon! In the meantime, check out our socials...</div>
         <div className="w-full my-8 flex justify-center">
