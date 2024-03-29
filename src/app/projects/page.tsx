@@ -34,22 +34,23 @@ const ProjectsPage = () => {
       techStack: ['HTML', 'React.JS', 'Tailwind CSS', 'MongoDB'],
     },
   ];
+  
   return (
     <>
-      <h1 className="text-left text-white text-5xl font-semibold mb-10 mt-10 mx-auto px-8 lg:px-48">Our Projects</h1>
-      {/*Map 6 projects as json --> project coponent
-      vertical scrollable
-      props: image, title, tech stack (store as list)*/}
-      <div className="mx-auto px-8 lg:px-48">
-      <Project
-        imagePath="/image.jpg"
-        title="Sample Project"
-        techStack={['HTML', 'React.JS', 'Tailwind CSS', 'MongoDB']}
-      />
-    </div>
-
+      <h1 className="text-left text-white text-6xl font-semibold mb-10 mt-10 mx-auto px-8 lg:px-48">Our Projects</h1>
+      <div className="mx-auto px-8 lg:px-48 flex flex-wrap ">
+        {Projects.map((project, index) => (
+          <div key={index} className="w-[30%] md:w-[30%] mb-4 md:mb-8 mx-2 md:mx-4">
+            <Project
+              imagePath={project.imagePath}
+              title={project.title}
+              techStack={project.techStack}   
+            />
+          </div>
+        ))}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;
