@@ -1,11 +1,11 @@
 // pages/why-us.js
-import Head from 'next/head';
+//
 const WhyUsPage = () => {
   return (
     <div className="bg-black text-white py-8 pb-[600px]">
-      <Head>
+     
         <title>Why Us - TAMID Group at Northeastern University</title>
-      </Head>
+      
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <h1 className="text-5xl font-bold mb-4">Why Join Us</h1>
         <br></br>
@@ -19,7 +19,7 @@ const WhyUsPage = () => {
         </p>
         <br></br>
         <br></br>
-        <h1 className="text-5xl font-bold mb-4">Why Work With Us</h1>
+        <h1 className="text-5xl font-bold mb-4 relative z-10">Why Work With Us</h1>
         <br></br>
         <h2 className='text-1.5xl font-bold mb-4'>Access to Elite, Driven Talent</h2>
         <p className="mb-4 relative z-10">
