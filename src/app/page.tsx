@@ -69,7 +69,7 @@ const InfiniteSlider = () => {
         </div>
 
         <div className="infinite-scroll flex items-center justify-around absolute gap-[2rem]">
-          {testimonials.map((t, i) => {
+        {testimonials.map((t, i) => {
             return (
               <div key={i} className="flex flex-col justify-center h-[10.5rem] w-[21rem] md:w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white md:hover:bg-opacity-20 md:hover:scale-[110%] duration-300">
                 <p className="text-[#ADBCC2] mb-4 md:mb-6 font-semibold leading-snug">{t.quote}</p>
@@ -78,7 +78,7 @@ const InfiniteSlider = () => {
               </div>
             );
           })}
-          {testimonials.map((t, i) => {
+        {testimonials.map((t, i) => {
             return (
               <div key={i} className="flex flex-col justify-center h-[10.5rem] w-[21rem] md:w-[24rem] md:h-[12rem] py-2 md:py-4 px-8 md:px-10 bg-white bg-opacity-5 shadow-lg rounded-xl border border-opacity-25 border-white md:hover:bg-opacity-20 md:hover:scale-[110%] duration-300">
                 <p className="text-[#ADBCC2] mb-4 md:mb-6 font-semibold leading-snug">{t.quote}</p>
