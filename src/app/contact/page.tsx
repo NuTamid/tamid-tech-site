@@ -1,12 +1,10 @@
-import Head from 'next/head';
+
 const ContactPage = () => {
   // Assuming techColors is defined somewhere
   const techColors = ['#FC9639', '#FC6161', '#FC397F'].join(',');
   return (
     <>
-      <Head>
-        <title>Contact Us - TAMID Tech Consulting</title>
-      </Head>
+        <title>Contact Us at TAMID Tech Consulting</title>
       <div className="relative min-h-screen flex flex-col justify-center items-center bg-black px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md z-10"> {/* Increase z-index of form container */}
           <div className="bg-black p-6 rounded-lg shadow-lg sm:p-8">
